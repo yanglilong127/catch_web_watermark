@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装组件</title>
+
+</head>
+<body>
+	<p id="myText">我是文本！</p>	
+	<div id="box">
+
+	</div>
+
+<script src='js/jquery-3.2.1.min.js'></script>
+<script src='js/jquery-ui-guide.js'></script>
+<script>
+	$('#myText').uiGuide({
+		stepData:[
+			{text1:'龙龙',  text2:'克克'},
+			{text1:'杨龙龙',text2:'张克克'}
+			],
+		activeIndex:1
+	}).on('finish',function(event,ouput){
+		alert(ouput);
+	});
+
+
+</script>
+</body>
+</html>
